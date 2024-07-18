@@ -1,33 +1,35 @@
 <?php
-class Operacao{
-    public $somar;
-    public $adicionar;
-    public $multiplicar;
-    public $dividir;
+// Classe Curso para representar o curso
+class Curso {
+    private $curso;
+    private $descricao;
+    private $cargahoraria;
+    private $professor;
 
-    function somar(){
-        
-    }
-    function subtrair(){
-
-    }
-    function multiplicar(){
-
-    }
-    function dividir(){
-
+    // Construtor da classe que será público
+    public function __construct($curso, $descricao, $cargahoraria, $professor) {
+        $this->curso = $curso;
+        $this->descricao = $descricao;
+        $this->cargahoraria = $cargahoraria;
+        $this->professor = $professor;
     }
 
-    function resultado(){
-        echo "A soma de $this->soma dividido por $this->dividir e multiplicado por $this->multiplicar é igual a ";
+    // Getters que servem para fazer o acesso às propriedades
+    public function getCurso() {
+        return $this->curso;
+    }
+
+    public function getDescricao() {
+        return $this->descricao;
+    }
+    
+    public function getCargahoraria() {
+        return $this->cargahoraria;
+    }
+
+    public function getProfessor() {
+        return $this->professor;
     }
 }
-
-$minhaOperacao = new Operacao();
-$minhaOperacao->somar();
-$minhaOperacao->subtrair();
-$minhaOperacao->multiplicar();
-$minhaOperacao->dividir();
-$minhaOperacao->resultado();
-
 ?>
+
